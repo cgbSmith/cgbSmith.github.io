@@ -145,6 +145,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/09/java/springmvc/mvc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gavin_Changb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/09/java/springmvc/mvc/" class="post-title-link" itemprop="url">springmvc</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-11-09 18:52:01 / Modified: 20:26:26" itemprop="dateCreated datePublished" datetime="2022-11-09T18:52:01+08:00">2022-11-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="springMVC的作用"><a href="#springMVC的作用" class="headerlink" title="springMVC的作用"></a>springMVC的作用</h2><ul>
+<li>在我看来springmvc是用来处理表现层的一套开发框架，简单来说就是用来处理后端如何接受并处理前端发来的请求，我认为springmvc这个框架是来规范我们如何去写接口的。</li>
+</ul>
+<h2 id="springMVC的配置"><a href="#springMVC的配置" class="headerlink" title="springMVC的配置"></a>springMVC的配置</h2><ul>
+<li><p>springMVC的默认配置文件web.xml在WEB-INF下</p>
+</li>
+<li><p>其中web.xml中最重要的就是注册前端控制器DispatcherServlet，这是用来收发请求的核心</p>
+</li>
+<li><p>在web.xml文件中还可以通过初始化参数指定springmvc配置文件的位置和名称（springmvc.xml）</p>
+</li>
+<li><p>在springmvc.xml中的配置的是视图解析器，拦截器等内容</p>
+</li>
+<li><p>就是说web.xml是最顶层的配置，在web.xml中可以设置springmvc的配置文件路径和名称，还可以注册前端控制器；而springmvc.xml的作用是配置springmvc需要用的的工具，如视图解析器，拦截器，解码器等等。</p>
+<h3 id="重点总结"><a href="#重点总结" class="headerlink" title="重点总结"></a>重点总结</h3><h3 id="springmvc工作的流程：浏览器发送请求，若请求地址符合前端控制器的url-pattern，该请求就会被前端控制器-DispatcherServlet处理。前端控制器会读取SpringMVC的核心配置文件，通过扫描组件找到控制器，-将请求地址和控制器中-RequestMapping注解的value属性值进行匹配，若匹配成功，该注解所标识的-控制器方法就是处理请求的方法。处理请求的方法需要返回一个字符串类型的视图名称，该视图名称会-被视图解析器解析，加上前缀和后缀组成视图的路径，通过Thymeleaf对视图进行渲染，最终转发到视-图所对应页面"><a href="#springmvc工作的流程：浏览器发送请求，若请求地址符合前端控制器的url-pattern，该请求就会被前端控制器-DispatcherServlet处理。前端控制器会读取SpringMVC的核心配置文件，通过扫描组件找到控制器，-将请求地址和控制器中-RequestMapping注解的value属性值进行匹配，若匹配成功，该注解所标识的-控制器方法就是处理请求的方法。处理请求的方法需要返回一个字符串类型的视图名称，该视图名称会-被视图解析器解析，加上前缀和后缀组成视图的路径，通过Thymeleaf对视图进行渲染，最终转发到视-图所对应页面" class="headerlink" title="springmvc工作的流程：浏览器发送请求，若请求地址符合前端控制器的url-pattern，该请求就会被前端控制器 DispatcherServlet处理。前端控制器会读取SpringMVC的核心配置文件，通过扫描组件找到控制器， 将请求地址和控制器中@RequestMapping注解的value属性值进行匹配，若匹配成功，该注解所标识的 控制器方法就是处理请求的方法。处理请求的方法需要返回一个字符串类型的视图名称，该视图名称会 被视图解析器解析，加上前缀和后缀组成视图的路径，通过Thymeleaf对视图进行渲染，最终转发到视 图所对应页面"></a>springmvc工作的流程：浏览器发送请求，若请求地址符合前端控制器的url-pattern，该请求就会被前端控制器 DispatcherServlet处理。前端控制器会读取SpringMVC的核心配置文件，通过扫描组件找到控制器， 将请求地址和控制器中@RequestMapping注解的value属性值进行匹配，若匹配成功，该注解所标识的 控制器方法就是处理请求的方法。处理请求的方法需要返回一个字符串类型的视图名称，该视图名称会 被视图解析器解析，加上前缀和后缀组成视图的路径，通过Thymeleaf对视图进行渲染，最终转发到视 图所对应页面</h3></li>
+</ul>
+<h2 id="springMVC的注解"><a href="#springMVC的注解" class="headerlink" title="springMVC的注解"></a>springMVC的注解</h2><ul>
+<li>@RequestMapping注解：处理请求和控制器方法之间的映射关系</li>
+</ul>
+<p>​	</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/09/Daily/Daily/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2285,12 +2362,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
