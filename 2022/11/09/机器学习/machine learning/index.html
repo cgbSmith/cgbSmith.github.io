@@ -20,15 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/springboot/index.html">
+  <meta name="description" content="强化学习 简单来说：智能系统与环境进行交互，环境的当前状态和奖励会影响系统的下一步行为，而系统的下一步行为将会反过来决定环境的下一次环境状态和奖励  策略：当前状态下可能会采取什么行动，数学上可表示为条件概率分布P(a|s)，表示再当前状态s下，采取某个动作a的条件分布概率  衰减函数y∈[0,1]，用于计算长期累积奖励的期望。因为当前的状态和动作对之后的每次的奖励影响会越来越低，所以y设置为不大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macheine learning notes">
+<meta property="og:url" content="http://example.com/2022/11/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine%20learning/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="强化学习 简单来说：智能系统与环境进行交互，环境的当前状态和奖励会影响系统的下一步行为，而系统的下一步行为将会反过来决定环境的下一次环境状态和奖励  策略：当前状态下可能会采取什么行动，数学上可表示为条件概率分布P(a|s)，表示再当前状态s下，采取某个动作a的条件分布概率  衰减函数y∈[0,1]，用于计算长期累积奖励的期望。因为当前的状态和动作对之后的每次的奖励影响会越来越低，所以y设置为不大">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-09T13:13:46.950Z">
+<meta property="article:modified_time" content="2022-11-09T14:11:10.772Z">
 <meta property="article:author" content="Gavin_Changb">
+<meta property="article:tag" content="ml">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/tags/springboot/">
+<link rel="canonical" href="http://example.com/2022/11/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine%20learning/">
 
 
 <script id="page-configurations">
@@ -36,12 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: springboot | Hexo</title>
+  <title>macheine learning notes | Hexo</title>
   
 
 
@@ -139,51 +144,87 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">springboot
-          <small>Tag</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine%20learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gavin_Changb">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          macheine learning notes
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-11-09 21:13:46 / Modified: 22:11:10" itemprop="dateCreated datePublished" datetime="2022-11-09T21:13:46+08:00">2022-11-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <h1 id="强化学习"><a href="#强化学习" class="headerlink" title="强化学习"></a>强化学习</h1><ul>
+<li><p>简单来说：智能系统与环境进行交互，环境的当前状态和奖励会影响系统的下一步行为，而系统的下一步行为将会反过来决定环境的下一次环境状态和奖励</p>
+</li>
+<li><p>策略：当前状态下可能会采取什么行动，数学上可表示为条件概率分布P(a|s)，表示再当前状态s下，采取某个动作a的条件分布概率</p>
+</li>
+<li><p>衰减函数y∈[0,1]，用于计算长期累积奖励的期望。因为当前的状态和动作对之后的每次的奖励影响会越来越低，所以y设置为不大于1。</p>
+</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2022-11-09T15:37:12+08:00"
-              content="2022-11-09">
-          11-09
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ml/" rel="tag"># ml</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/11/09/java/springboot2/SpringBoot%E8%AE%B2%E4%B9%89/" itemprop="url">
-            <span itemprop="name">笔记</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/11/09/java/springmvc/mvc/" rel="prev" title="springmvc">
+      <i class="fa fa-chevron-left"></i> springmvc
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -236,6 +277,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">强化学习</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
