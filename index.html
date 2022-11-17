@@ -145,158 +145,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/17/Go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gavin_Changb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/17/Go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">Go基本数据类型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-11-17 10:18:46" itemprop="dateCreated datePublished" datetime="2022-11-17T10:18:46+08:00">2022-11-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-11-16 19:06:46" itemprop="dateModified" datetime="2022-11-16T19:06:46+08:00">2022-11-16</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="VSCode快捷键"><a href="#VSCode快捷键" class="headerlink" title="VSCode快捷键"></a>VSCode快捷键</h3><ul>
-<li>打开终端： <code>ctrl+~ </code> </li>
-<li>打开搜索框 <code>ctrl+shift+p</code></li>
-<li>格式化代码 <code>alt+shift+f</code></li>
-</ul>
-<!-- <kbd></kbd>的使用 -->
-
-<h3 id="配置GOPROXY"><a href="#配置GOPROXY" class="headerlink" title="配置GOPROXY"></a>配置GOPROXY</h3><ul>
-<li><pre><code class="bash">go env -w GOPROXY=https://goproxy.cn,direct
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 创建新项目时，初始化</span><br><span class="line"></span><br><span class="line">- go mod init 项目名  （会在当前项目文件夹下创建go.mod）</span><br><span class="line">- go get </span><br><span class="line"></span><br><span class="line">### go module导入本地包</span><br><span class="line"></span><br><span class="line">- 一个（目录名）包下可以有多个go文件，但是这些go文件的package名都为这个包名</span><br><span class="line">- 导入该包后（报名为目录名），可以调用该包中全部go文件的函数</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># go变量</span><br><span class="line"></span><br><span class="line">- 标准声明</span><br><span class="line"></span><br><span class="line">  &gt; var 变量名 变量类型</span><br><span class="line"></span><br><span class="line">- 例子：</span><br><span class="line"></span><br><span class="line">  &gt; var name string</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; var age int</span><br><span class="line"></span><br><span class="line">- 批量声明：</span><br><span class="line"></span><br><span class="line">  &gt; var (</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		a string </span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		b int</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		c bool</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		d float32</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; )</span><br><span class="line"></span><br><span class="line">- 变量初始化：</span><br><span class="line"></span><br><span class="line">  &gt;var 变量名 变量类型 = 表达式</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;eg: var name string = &quot;cgb&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;​	  var age int = 18</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;**初始化多个变量:** var  name,age = &quot;cgb&quot;, 20</span><br><span class="line"></span><br><span class="line">- 类型推导：即省略变量的类型，靠编译器根据等号右边的值来推到变量的类型完成初始化：</span><br><span class="line"></span><br><span class="line">  &gt;var name = &quot;Gb&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;var age = 20</span><br><span class="line"></span><br><span class="line">- 短变量声明：在函数的内部，可以使用更加简略的方式&lt;kbd&gt;:=&lt;/kbd&gt;来进行声明和初始化变量</span><br><span class="line"></span><br><span class="line">  ```go</span><br><span class="line">  package main</span><br><span class="line">  </span><br><span class="line">  import (</span><br><span class="line">  	&quot;fmt&quot;</span><br><span class="line">  )</span><br><span class="line">  var m = 100 //此处为全局变量</span><br><span class="line">  func main()&#123;</span><br><span class="line">      n := 10</span><br><span class="line">      m := 200 //声明局部变量</span><br><span class="line">      fmt.Println(m,n)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</code></pre>
-</li>
-<li><p>匿名变量：使用多重赋值时，用于不想接受某一个值时使用，匿名变量用<kbd>_</kbd>表示，</p>
-<p><kbd>注意：</kbd>匿名变量不占用命名空间和不分配内存，更类似一个概念性的变量，并不实际存在</p>
-<p>例如：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">foo</span><span class="params">()</span></span>(<span class="type">int</span>,<span class="type">string</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">10</span>,<span class="string">&quot;cgb&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    x,_:=foo() <span class="comment">//只接受整数，字符串用匿名变量接受</span></span><br><span class="line">    _,y:=foo()<span class="comment">//只接受string，整型用匿名变量接受</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><kbd>注意事项:</kbd></p>
-<pre><code>1. 函数外面的语句必须要以关键字开头（例如 var，const，func等等）
-1. &lt;kbd&gt;:=&lt;/kbd&gt;不能用在函数外面
-1. _多用于占位，表示忽略（或者说是匿名变量）
-</code></pre>
-</li>
-<li><p>常量：恒定不变的值，用const来进行声明，和变量声明的方式类似，但是关键字不同而已</p>
-</li>
-<li><p>iota：go的常量计数器，<strong>只能在常量表达式中使用</strong>；<u>在const关键字出现时将被重置为0。const中每新增一行常量声明将使<code>iota</code>计数一次(iota可理解为const语句块中的行索引)。 使用iota能简化定义，在定义枚举时很有用。</u>Eg:</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>(</span><br><span class="line">	n1 = <span class="literal">iota</span> <span class="comment">//0</span></span><br><span class="line">    n2		<span class="comment">//1</span></span><br><span class="line">    n3		<span class="comment">//2</span></span><br><span class="line">    n4		<span class="comment">//3</span></span><br><span class="line">)</span><br><span class="line"><span class="comment">//利用 _ 进行跳过某些值</span></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">		n1 = <span class="literal">iota</span> <span class="comment">//0</span></span><br><span class="line">		n2        <span class="comment">//1</span></span><br><span class="line">		_</span><br><span class="line">		n4        <span class="comment">//3</span></span><br><span class="line">	)</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p><kbd>重要</kbd>Golang中，变量一定要在声明后才能使用，并且Go语言的变量声明后一定要使用</p>
-</li>
-<li><p>关于Printf和Println函数，Printf用于需要格式化输出的时候，而Println不能输出格式化内容。</p>
-</li>
-<li><p>Go中bool默认值为false，并且Go中不允许将整型强制转换为布尔型</p>
-</li>
-<li><p>Go中的转义字符</p>
-<table>
-<thead>
-<tr>
-<th>转义符</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><kbd>\r</kbd></td>
-<td>回车符（返回行首）</td>
-</tr>
-<tr>
-<td><kbd>\n</kbd></td>
-<td>换行符（直接跳到下一行同列位置）</td>
-</tr>
-<tr>
-<td><kbd>\t</kbd></td>
-<td>制表符</td>
-</tr>
-<tr>
-<td><kbd>\' </kbd></td>
-<td>单引号</td>
-</tr>
-<tr>
-<td><kbd>\"</kbd></td>
-<td>双引号</td>
-</tr>
-<tr>
-<td><kbd>\\</kbd></td>
-<td>反斜杠</td>
-</tr>
-</tbody></table>
-</li>
-<li><p>Go语言的字符有两种：</p>
-<blockquote>
-<ol>
-<li><p>unit8类型，或者叫byte型，代表一个ASCII码字符</p>
-</li>
-<li><p>rune类型，代表一个UTF-8字符 <kbd>实际上是一个int32类型</kbd> 用于处理中文，日文又或者其他符合字符时</p>
-</li>
-<li><p>字符串底层是一个byte数组，所以可以和[]byte类型互相转换，<strong>字符串时不能修改的，字符串由byte字节组成，因此字符串长度时byte字节的长度，rune类型可以用来表示utf8字符，一个rune字符由一个或者多个byte组成。</strong></p>
-</li>
-<li><p><kbd>字符串的修改:</kbd>要求改字符串，需要先将字符串转换为[]rune或者[]byte，完成后再转换为string,如下：</p>
-</li>
-<li><p>&#96;&#96;&#96;go<br>func changeString() {<br>s1 :&#x3D; “big”<br>&#x2F;&#x2F; 强制类型转换<br>byteS1 :&#x3D; []byte(s1)<br>byteS1[0] &#x3D; ‘p’<br>fmt.Println(string(byteS1))<br><br>s2 :&#x3D; “白萝卜”<br>runeS2 :&#x3D; []rune(s2)<br>runeS2[0] &#x3D; ‘红’<br>fmt.Println(string(runeS2))<br>}</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 类型转换：go中只有强制类型转换，没有隐式类型转换，并且强制转换只能在支持相互转换的两个类型之间使用，基础语法如下</span><br><span class="line"></span><br><span class="line"> ```T（表达式）```</span><br><span class="line"></span><br><span class="line">T表示要转换的类型，表达式包括变量，复杂算子和函数返回值等。Eg：</span><br><span class="line"></span><br><span class="line">```go</span><br><span class="line">func sqrtDemo() &#123;</span><br><span class="line">	var a, b = 3, 4</span><br><span class="line">	var c int</span><br><span class="line">	// math.Sqrt()接收的参数是float64类型，需要强制转换</span><br><span class="line">	c = int(math.Sqrt(float64(a*a + b*b)))</span><br><span class="line">	fmt.Println(c)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<p>​    </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/15/java/Java%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/leedcode_offer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -6551,67 +6399,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/09/11.9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gavin_Changb">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/09/11.9/" class="post-title-link" itemprop="url">11.9 2022</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-11-09 13:23:11 / Modified: 15:59:04" itemprop="dateCreated datePublished" datetime="2022-11-09T13:23:11+08:00">2022-11-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="The-beginning"><a href="#The-beginning" class="headerlink" title="The beginning"></a>The beginning</h1><ul>
-<li>今天把用hexo搭建的blog迁移到实验室了，以后可以在实验室写blog啦</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
 
@@ -6678,12 +6465,12 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
