@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="VSCode快捷键 打开终端： ctrl+~   打开搜索框 ctrl+shift+p 格式化代码 alt+shift+f    配置GOPROXY go env -w GOPROXY&#x3D;https:&#x2F;&#x2F;goproxy.cn,direct 123456789101112131415161718192021222324252627282930313233343536373839404142434445">
+  <meta name="description" content="[TOC]- Golang中:&#x3D;和&#x3D;的区别 VSCode快捷键 打开终端： ctrl+~   打开搜索框 ctrl+shift+p 格式化代码 alt+shift+f    配置GOPROXY go env -w GOPROXY&#x3D;https:&#x2F;&#x2F;goproxy.cn,direct 1234567891011121314151617181920212223242526272829">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Go基本数据类型">
-<meta property="og:url" content="http://example.com/2022/11/17/go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:url" content="http://example.com/2022/11/19/go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Gavin_Chan">
-<meta property="og:description" content="VSCode快捷键 打开终端： ctrl+~   打开搜索框 ctrl+shift+p 格式化代码 alt+shift+f    配置GOPROXY go env -w GOPROXY&#x3D;https:&#x2F;&#x2F;goproxy.cn,direct 123456789101112131415161718192021222324252627282930313233343536373839404142434445">
+<meta property="og:description" content="[TOC]- Golang中:&#x3D;和&#x3D;的区别 VSCode快捷键 打开终端： ctrl+~   打开搜索框 ctrl+shift+p 格式化代码 alt+shift+f    配置GOPROXY go env -w GOPROXY&#x3D;https:&#x2F;&#x2F;goproxy.cn,direct 1234567891011121314151617181920212223242526272829">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-11-17T02:18:46.775Z">
-<meta property="article:modified_time" content="2022-11-17T03:45:45.365Z">
+<meta property="article:published_time" content="2022-11-19T07:54:15.683Z">
+<meta property="article:modified_time" content="2022-11-19T07:54:15.683Z">
 <meta property="article:author" content="Gavin_Changb">
 <meta property="article:tag" content="go">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/11/17/go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+<link rel="canonical" href="http://example.com/2022/11/19/go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
 
 <script id="page-configurations">
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/17/go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/11/19/go/go%E8%AF%AD%E8%A8%80%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -173,9 +173,8 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2022-11-17 10:18:46 / Modified: 11:45:45" itemprop="dateCreated datePublished" datetime="2022-11-17T10:18:46+08:00">2022-11-17</time>
+              <time title="Created: 2022-11-19 15:54:15" itemprop="dateCreated datePublished" datetime="2022-11-19T15:54:15+08:00">2022-11-19</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -198,7 +197,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="VSCode快捷键"><a href="#VSCode快捷键" class="headerlink" title="VSCode快捷键"></a>VSCode快捷键</h3><ul>
+        <p>[TOC]- <a href="#golang%E4%B8%AD%E5%92%8C%E7%9A%84%E5%8C%BA%E5%88%AB">Golang中:&#x3D;和&#x3D;的区别</a></p>
+<h3 id="VSCode快捷键"><a href="#VSCode快捷键" class="headerlink" title="VSCode快捷键"></a>VSCode快捷键</h3><ul>
 <li>打开终端： <code>ctrl+~ </code> </li>
 <li>打开搜索框 <code>ctrl+shift+p</code></li>
 <li>格式化代码 <code>alt+shift+f</code></li>
@@ -207,7 +207,7 @@
 
 <h3 id="配置GOPROXY"><a href="#配置GOPROXY" class="headerlink" title="配置GOPROXY"></a>配置GOPROXY</h3><ul>
 <li><pre><code class="bash">go env -w GOPROXY=https://goproxy.cn,direct
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 创建新项目时，初始化</span><br><span class="line"></span><br><span class="line">- go mod init 项目名  （会在当前项目文件夹下创建go.mod）</span><br><span class="line">- go get </span><br><span class="line"></span><br><span class="line">### go module导入本地包</span><br><span class="line"></span><br><span class="line">- 一个（目录名）包下可以有多个go文件，但是这些go文件的package名都为这个包名</span><br><span class="line">- 导入该包后（报名为目录名），可以调用该包中全部go文件的函数</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"># go变量</span><br><span class="line"></span><br><span class="line">- 标准声明</span><br><span class="line"></span><br><span class="line">  &gt; var 变量名 变量类型</span><br><span class="line"></span><br><span class="line">- 例子：</span><br><span class="line"></span><br><span class="line">  &gt; var name string</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; var age int</span><br><span class="line"></span><br><span class="line">- 批量声明：</span><br><span class="line"></span><br><span class="line">  &gt; var (</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		a string </span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		b int</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		c bool</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		d float32</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; )</span><br><span class="line"></span><br><span class="line">- 变量初始化：</span><br><span class="line"></span><br><span class="line">  &gt;var 变量名 变量类型 = 表达式</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;eg: var name string = &quot;cgb&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;​	  var age int = 18</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;**初始化多个变量:** var  name,age = &quot;cgb&quot;, 20</span><br><span class="line"></span><br><span class="line">- 类型推导：即省略变量的类型，靠编译器根据等号右边的值来推到变量的类型完成初始化：</span><br><span class="line"></span><br><span class="line">  &gt;var name = &quot;Gb&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;var age = 20</span><br><span class="line"></span><br><span class="line">- 短变量声明：在函数的内部，可以使用更加简略的方式&lt;kbd&gt;:=&lt;/kbd&gt;来进行声明和初始化变量</span><br><span class="line"></span><br><span class="line">  ```go</span><br><span class="line">  package main</span><br><span class="line">  </span><br><span class="line">  import (</span><br><span class="line">  	&quot;fmt&quot;</span><br><span class="line">  )</span><br><span class="line">  var m = 100 //此处为全局变量</span><br><span class="line">  func main()&#123;</span><br><span class="line">      n := 10</span><br><span class="line">      m := 200 //声明局部变量</span><br><span class="line">      fmt.Println(m,n)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 创建新项目时，初始化</span><br><span class="line"></span><br><span class="line">- go mod init 项目名  （会在当前项目文件夹下创建go.mod）</span><br><span class="line">- go get </span><br><span class="line"></span><br><span class="line">### go module导入本地包</span><br><span class="line"></span><br><span class="line">- 一个（目录名）包下可以有多个go文件，但是这些go文件的package名都为这个包名</span><br><span class="line">- 导入该包后（报名为目录名），可以调用该包中全部go文件的函数</span><br><span class="line"></span><br><span class="line"># </span><br><span class="line"></span><br><span class="line">## 1-Go变量</span><br><span class="line"></span><br><span class="line">- 标准声明</span><br><span class="line"></span><br><span class="line">  &gt; var 变量名 变量类型</span><br><span class="line"></span><br><span class="line">- 例子：</span><br><span class="line"></span><br><span class="line">  &gt; var name string</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; var age int</span><br><span class="line"></span><br><span class="line">- 批量声明：</span><br><span class="line"></span><br><span class="line">  &gt; var (</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		a string </span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		b int</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		c bool</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; ​		d float32</span><br><span class="line">  &gt;</span><br><span class="line">  &gt; )</span><br><span class="line"></span><br><span class="line">- 变量初始化：</span><br><span class="line"></span><br><span class="line">  &gt;var 变量名 变量类型 = 表达式</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;eg: var name string = &quot;cgb&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;​	  var age int = 18</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;**初始化多个变量:** var  name,age = &quot;cgb&quot;, 20</span><br><span class="line"></span><br><span class="line">- 类型推导：即省略变量的类型，靠编译器根据等号右边的值来推到变量的类型完成初始化：</span><br><span class="line"></span><br><span class="line">  &gt;var name = &quot;Gb&quot;</span><br><span class="line">  &gt;</span><br><span class="line">  &gt;var age = 20</span><br><span class="line"></span><br><span class="line">- 短变量声明：在函数的内部，可以使用更加简略的方式&lt;kbd&gt;:=&lt;/kbd&gt;来进行声明和初始化变量</span><br><span class="line"></span><br><span class="line">  ```go</span><br><span class="line">  package main</span><br><span class="line">  </span><br><span class="line">  import (</span><br><span class="line">  	&quot;fmt&quot;</span><br><span class="line">  )</span><br><span class="line">  var m = 100 //此处为全局变量</span><br><span class="line">  func main()&#123;</span><br><span class="line">      n := 10</span><br><span class="line">      m := 200 //声明局部变量</span><br><span class="line">      fmt.Println(m,n)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
 <li><p>匿名变量：使用多重赋值时，用于不想接受某一个值时使用，匿名变量用<kbd>_</kbd>表示，</p>
@@ -307,12 +307,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/11/15/java/Java%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/leedcode_offer/" rel="prev" title="offer专项练习">
-      <i class="fa fa-chevron-left"></i> offer专项练习
+    <a href="/2022/11/19/go/go%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" rel="prev" title="Go流程控制">
+      <i class="fa fa-chevron-left"></i> Go流程控制
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/11/17/go/go%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" rel="next" title="Go流程控制">
-      Go流程控制 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/11/21/python/spider/spider/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -386,14 +386,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span></a>
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
         <span class="site-state-item-count">8</span>
